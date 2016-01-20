@@ -102,6 +102,14 @@
 #  $check_link_down = false
 #    Set to true to add check_link_down function in the interface file
 #
+#  $bonding_master = undef
+#    Used to identify the bonding master on RHEL 6+
+#    Valid values are undef, "yes, 'no".
+#
+#  $ipoib_mode = undef
+#    Used to identify IPOIB mode
+#    Valid values are undef, "connected", "datagram"
+#
 # == RedHat only Open vSwitch specific parameters
 #
 #  $devicetype      = undef,
@@ -256,6 +264,8 @@ define network::interface (
   $nozeroconf      = undef,
   $linkdelay       = undef,
   $check_link_down = false,
+  $bonding_master  = undef,
+  $ipoib_mode      = undef,
 
   # RedHat specific for Open vSwitch
   $devicetype      = undef,

@@ -129,6 +129,12 @@ OVSDHCPINTERFACES="<%= @ovsdhcpinterfaces %>"
 <% if @ovsrequries -%>
 OVSREQURIES="<%= @ovsrequries %>"
 <% end -%>
+<% if @bonding_master -%>
+BONDING_MASTER="<%= @bonding_master %>"
+<% end -%>
+<% if @ipoib_mode -%>
+IPOIB_MODE="<%= @ipoib_mode %>"
+<% end -%>
 <% if @check_link_down == true -%>
 check_link_down() {
    return 1;
